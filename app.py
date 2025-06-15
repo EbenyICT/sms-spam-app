@@ -20,7 +20,7 @@ if st.button("Detect"):
         prediction = model.predict(transformed_input)[0]
 
         if prediction == "spam":
-            st.error("🚫 Spam Detected!")
+            st.error("🚫 Spam Detected from Yahoo Boy, Run!")
         else:
             st.success("✅ Message is Not Spam.")
     else:
