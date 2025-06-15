@@ -7,13 +7,13 @@ vectorizer = joblib.load("vectorizer.pkl")
 
 # Streamlit UI
 st.set_page_config(page_title="SMS Spam Detector")
-st.title("📩 SMS Spam Classifier")
+st.title("📩 Ebenezer's AI Detector for SMS Spam from Yahoo Boys")
 st.write("Enter an SMS message to check if it's spam or not.")
 
 # Input box
 user_input = st.text_area("Your message:")
 
-if st.button("Classify"):
+if st.button("Detect"):
     if user_input:
         # Transform input
         transformed_input = vectorizer.transform([user_input])
