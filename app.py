@@ -7,8 +7,8 @@ vectorizer = joblib.load("vectorizer.pkl")
 
 # Streamlit UI
 st.set_page_config(page_title="SMS Spam Detector")
-st.title("📩 Ebenezer's AI Detector for SMS Spam from Yahoo Boys")
-st.write("Enter an SMS message to check if it's spam or not.")
+st.title("📩 Ebenezer's AI Detector for SMS Spam from Scammers (A.K.A. Yahoo Yahoo)")
+st.write("Enter an SMS message to check if it's from a scammer or not.")
 
 # Input box
 user_input = st.text_area("Your message:")
@@ -20,7 +20,7 @@ if st.button("Detect"):
         prediction = model.predict(transformed_input)[0]
 
         if prediction == "spam":
-            st.error("🚫 Spam Detected from Yahoo Boy, Run!")
+            st.error("🚫 Spam Detected from a Scammer, Run!")
         else:
             st.success("✅ Message is Not Spam.")
     else:
